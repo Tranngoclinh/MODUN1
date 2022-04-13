@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas#game {
+            background-color: rgb(72, 224, 93);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="game" width="600" height="400" style="border: 1px solid rgb(246, 31, 7)">
+
+    </canvas>
+</body>
+<script>
+    var c = document.getElementById('game')
+    var nv1 = c.getContext("2d");
+    // var nv2 = c.getContext("2d");
+    setInterval(start, 10)
+   // setInterval(createCircle, 200)
+    // nhanvat = {
+    //     x: 260, y: 350
+    // }
+    // circle = {
+    //     x: 120, y: 360, radius: 10
+    // }
+
+    
+
+
+
+    function start() {
+        nv1.fillStyle = "red"
+        // nv1.fillRect(nhanvat.x, nhanvat.y, 80, 10)
+        nv1.beginPath()
+        nv1.arc(222,60,20,0,2*Math.PI)
+        nv1.fill()
+        // vacham();
+
+
+    }
+   // function vacham() {
+     //   if (nhanvat.x <= 0 || nhanvat.x + 80 >= 300) {
+    //        console.log('Thua');
+    //    }
+  //  }
+  //  function Circle(x, y, radius) {
+   //     this.x = x;
+   //     this.y = y;
+    //    this.radius = radius;
+        
+  //  }
+  //  function createCircle() {
+       // var c = document.getElementById("game").getContext("2d");
+    //    nv2.fillStyle = "blue"
+    //    var circle = new Circle(302, 340, 10);
+    //    nv2.beginPath();
+    //    nv2.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+     //   nv2.fill();
+      //  c.Circle();
+  //  }
+   // createCircle();
+   /// start();
+  //  document.addEventListener('keydown', key => {
+      //  nv1.clearRect(nhanvat.x, nhanvat.y, 80, 10)
+   //     nv1.fillStyle = "red"
+      //  switch (key.keyCode) {
+        //    case 37:
+        //        if (nhanvat.x > 0)
+       //             nhanvat.x -= 25
+        //        break;
+
+                
+            // case 38:
+            // if (nhanvat.y  > 0)
+            //     nhanvat.y -= 5
+            //     break;
+        //    case 39:
+        ///        if (nhanvat.x + 80 < 600)
+       //             nhanvat.x += 25
+         //       break;
+            // case 40:
+            //     if (nhanvat.y +25 < 400)
+            //         nhanvat.y += 5
+            //     break;
+      //  }
+      //  start();
+
+  //  });
+</script>
+
+</html>
