@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    // var preson={
+    //     name: "",
+    //     age:18,
+    //     interest: '',
+    //     move: function(){
+
+    //     },
+    //     say: function(){
+
+    //     }
+    // }
+
+    // function Person(){
+    //         this.name   = 'Trần Ngọc Linh';
+    //         this.age    = 0;
+    //         this.interest = "Viết code";
+    //         this.move = function(){
+    //             return "name ="+this.name+"age="+this.age+"interest="+this.interest;
+    //         }
+    //         this.say = function(){
+
+    //         }
+    //     }
+    // function Person2( name,age,interest){
+    //         this.name   = name;
+    //         this.age    = age;
+    //         this.interest =interest ;
+    //         this.move = function(){
+    //             return "name ="+this.name+"age="+this.age+"interest="+this.interest;
+    //         }
+    //         this.say = function(){
+
+    //         }
+    //     }
+    //     function interest(){
+    //         return this.name;
+    //     }
+    //     var person_1 = new Person();
+    //     var person_2 = new Person2('Trần Linh',20);
+    //     var person_3 = new Person2("Việt",22);
+    //     console.log(person_1.name)
+    //     console.log(person_2) 
+    //     console.log(person_1)  
+    //     console.log(person_3)
+    //     console.log(preson.age)
+
+
+    // let Myday = function(day,month,year){
+    //     this.day=day;
+    //     this.month=month;
+    //     this.year=year;
+    // };
+    // function Myday(day, month, year) {
+    //         this.day = day,//01
+    //         this.month = month,//11
+    //         this.year = year,//2003
+        
+    //         this.getday = function () {
+    //             return this.day
+    //         },
+    //         this.getmonth = function () {
+    //             return this.month
+    //         },
+    //         this.getyear = function () {
+    //             return this.year
+    //         },
+    //         this.setday = function (day_new) {
+    //             this.day = day_new
+    //         },
+    //         this.setmonth = function (month_new) {
+    //             this.month = month_new
+    //         },
+    //         this.setyear = function (year_new) {
+    //             this.year = year_new
+    //         }
+    // }
+    // let data = new Myday(01, 11, 2003)
+    // console.log(data)
+    // let day =data.getday();
+    // console.log(day)
+    // let month = data.getmonth();
+    // console.log(month)
+    // let year = data.getyear();
+    // console.log(year)
+    // console.log( data.day + '/' + data.month + '/' + data.year);
+    // data.setday(10);
+    // data.setmonth(12);  
+    // data.setyear(1990);
+    // console.log( data.day + '/' + data.month + '/' + data.year);
+    // console.log(data.getday())
+   
+
+//    function Studen(name,age,masv,class_name){
+//     this.name = name;
+//     this.age = age ;
+//     this.masv = masv;
+//     this.class_name = class_name;
+   
+//    this.getname = function () {
+//         return this.name
+//     }
+//     this.getage = function () {
+//         return this.age
+//     }
+//     this.getmasv = function () {
+//         return this.masv
+//     }
+//     this.getclass_name = function () {
+//         return this.class_name
+//     }
+//     this.getInfo= function (){
+//         return this.name +' /'+ this.age +'/ '+ this.masv +' /'+ this.class_name
+//     }
+//     this.setname = function (name_new) {
+//          this.name = name_new
+//     }
+//     this.setage = function (age_new) {
+//        this.age = age_new
+//     }
+//     this.setmasv = function (masv_new) {
+//          this.masv=masv_new
+//     }
+//     this.setclass_name = function (class_name_new) {
+//         this.class_name=class_name_new
+//     } 
+// }
+// var studen_1= new Studen ('Trần Ngọc Linh',18,123,'C0222H1')
+// var studen_2= new Studen ('Ngọc Linh',20,1113,'CodeGym')
+// console.log(studen_1)
+// console.log(studen_2.getInfo())
+// console.log(studen_1.getname())
+// console.log(studen_1.getage())
+// console.log(studen_1.getmasv())
+// console.log(studen_1.getclass_name())
+// console.log('===========================')
+// studen_1.setname('Linh')
+// studen_1.setage(19)
+// studen_1.setmasv(001)
+// studen_1.setclass_name('C0222')
+// console.log(studen_1)
+// console.log(studen_1.getname())
+// console.log(studen_1.getage())
+// console.log(studen_1.getmasv())
+// console.log(studen_1.getclass_name())
+// console.log('===========================')
+// console.log(studen_2)
+
+class MyDate{
+    constructor(day,month,year){
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+    getDay(){
+       return this.day
+    }
+    getMonth(){
+       return this.month
+    }
+    getYear(){
+       return this.year
+    }
+    setDay(day_new){
+       this.day = day_new
+    }
+    getMonth(month_new){
+       this.month = month_new
+    }
+    getYear(year_new){
+       this.year = year_new
+    }
+    getInfo(){
+       return this.day+ ' / ' + this.month + ' / ' + this.year
+    }
+}
+var  mydate1 = new MyDate(01,11,2003)   
+console.log(mydate1)
+console.log(mydate1.getInfo())
+</script>
+
+</html>

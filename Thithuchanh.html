@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button onclick="bai1()">Câu 1</button>
+    <button onclick="bai2()">Câu 2</button>
+    <button onclick="bai3()">Câu 3</button>
+    <button onclick="bai4()">Câu 4</button>
+</head>
+
+<body>
+    <canvas id="game" width="600" height="400" style="border: 1px solid rgb(246, 31, 7)"></canvas>
+</body>
+<script>
+    function bai1() {
+        let arr = [7, 8, 9, 10, 9, 6, 4, 6]
+        let max = 0
+        function findMax() {
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i]
+                }
+            }
+            document.write('Điểm cao nhất là : ' + max)
+        }
+        findMax()
+    }
+
+    function bai2() {
+        let arr = [2, 4, 3, 5, 6, 8]
+        function tryRemoveFromArray(arr, x) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == x) {
+                    arr.splice(i, 1)
+                }
+            }
+            document.write(arr)
+        }
+        tryRemoveFromArray(arr, 3)
+    }
+
+    function bai3() {
+        function isFibonacci(x) {
+            var x0 = 0, x1 = 1, xn = 1, sum = 0
+            for (var i = 0; i <= x; i++) {
+                x0 = x1
+                x1 = xn
+                xn = x0 + x1
+                if (x == 0 || x == 1 || x == xn) {
+                    sum++
+                }
+            }
+            if (sum == 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        var x = prompt('Nhập 1 số')
+        if (isFibonacci(x)) {
+            document.write(x + ' nằm trong dãy fibonacci')
+        } else {
+            document.write(x + ' không nằm trong dãy fibonacci')
+        }
+        isFibonacci()
+    }
+
+
+    function bai4() {
+        class Circle {
+            constructor(x, y, radius,color) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.color=color;
+            }
+            render(){
+            var c = document.getElementById('game')
+            var nv2 = c.getContext("2d")
+            nv2.beginPath();
+            nv2.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+            nv2.fill();
+        }
+    }
+    var circle = new Circle(10, 10, 100,'#000000')
+    circle.render()
+}
+</script>
+
+</html>

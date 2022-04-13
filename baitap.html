@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button onclick="lietkesnt()">Liệt kê số nguyên tố</button><br><br>
+    <button onclick="bai1()">Bài 1</button><br><br>
+    <button onclick="bai2()">Bài 2</button><br><br>
+    <button onclick="bai3()">Bài 3</button><br><br>
+    <button onclick="bai4()">Bài 4</button><br><br>
+    <button onclick="bai5()">Bài 5</button><br><br>
+    <button onclick="bai6()">Bài 6</button><br><br>
+    <button onclick="bai7()">Bài 7</button><br><br>
+    <button onclick="bai2vl2()">Bài 2 vòng lặp 2</button><br><br>
+    <button onclick="timmax()">Tìm max</button><br><br>
+    <button onclick="solonhon10()">liệt kê số lớn hơn 10 trong mảng</button><br><br>
+    <button onclick="daonguoc()">đảo ngược phần tử trong mảng</button><br><br>
+    <button onclick="lietkemangdachieu()">liệt kê mảng đa chiều</button><br><br>
+    <button onclick="sosanhmang()">so sánh hai mảng nhập vào</button><br><br>
+    <button onclick="timkituso()">tìm kí tự số trong mảng</button><br><br>
+    <button onclick="thaythe()">thay - bằng _</button><br><br>
+    <button onclick="kiemtrasnt()">Kiểm tra snt nhập vào từ bàn phím</button><br><br>
+    <button onclick="lietkesntnhohonN()">Liệt kê snt nhỏ hơn N</button><br><br>
+    <button onclick="square()">Bình phương của 1 số</button><br><br>
+
+</head>
+
+<body>
+    <script>
+        // Đảo ngược các giá trị không dùng hàm reverse()
+        // let x = [-3, 5, 1, 3, 2, 10];
+        // let first = 0;
+        // let last = x.length - 1;
+        // while (first < last) {
+        // let b = x[first];
+        //     x[first] = x[last];
+        //     x[last] = b;
+        //     first++;
+        //     last--;
+        // }
+        // document.write(x);
+        //Kiểm tra số nhập vào 
+        // let value = prompt("Nhập Giá Trị : ");
+        // let numbers = [-3, 5, 1, 3, 2, 10];
+        // for (let i = 0; i < numbers.length; i++) {
+        //     if (value == numbers[i]) {
+        //         alert("Value "+ numbers[i] +" " +"found at " + i);
+        //     }
+        // }
+
+
+        function bai1() {
+            for (i = 1; i < 100; i++) {
+                document.write(i + '<br>');
+            }
+            if (i = 99) {
+                let ketqua = alert('Bạn đã hoàn thành');
+            }
+        }
+
+        function bai2() {
+            let nhietdo = prompt('Nhập nhiệt độ của bạn');
+            if (nhietdo < 20) {
+                alert('Bạn Cần tăng nhiệt độ');
+            }
+            else if (nhietdo > 100) {
+                alert('Bạn cần giảm nhiệt độ');
+            } else {
+                alert('Nhiệt độ của bạn bình thường')
+            }
+        }
+
+        function bai3() {
+            let count = 20;
+            let num1 = 0;
+            let num2 = 1;
+            for (i = 1; i <= count; i++) {
+                document.write(num1 + " ");
+                let ketqua = num1 + num2;
+                num1 = num2;
+                num2 = ketqua;
+            }
+        }
+
+        function bai4() {
+            let count = 20;
+            let num1 = 0;
+            let num2 = 1;
+            for (i = 1; i <= count; i++) {
+                // document.write(num1+" ");
+                let ketqua = num1 + num2;
+                num1 = num2;
+                num2 = ketqua;
+                if (ketqua % 5 == 0) {
+                    document.write('Số đầu tiên chia hết cho 5 là: ' + ketqua);
+                    break;
+                }
+            }
+        }
+
+        function bai5() {
+            let count = 20;
+            let num1 = 0;
+            let num2 = 1;
+            let tong = 0;
+            for (i = 1; i <= count; i++) {
+                document.write(num1 + " ");
+                let ketqua = num1 + num2;
+                tong = ketqua;
+                num1 = num2;
+                num2 = ketqua;
+            }
+            document.write('<br>' + 'Tổng' + ' ' + count + ' ' + 'số đầu tiên là:' + tong);
+        }
+        function bai6() {
+            let numbers = 1000;
+            let tong = 0;
+            let dem = 0;
+            for (i = 0; i <= numbers; i++) {
+                if (i % 7 == 0) {
+                    document.write(i + ' ');
+                    tong = tong + i;
+                    dem++;
+                }
+                if (dem == 30) {
+                    document.write('<br>' + 'Tổng 30 số đầu tiên chia hết cho 7 là:' + ' ' + tong);
+                    break;
+                }
+            }
+        }
+
+        function bai7() {
+            let tong = 0;
+            let dem = 0;
+            for (i = 1; i <= 100; i++) {
+                if (i % 3 == 0 && i % 5 == 0) {
+                    document.write('FizzBuzz' + '<br> ');
+                }
+                else if (i % 3 == 0) {
+                    document.write('Fizz' + '<br> ');
+                }
+                else if (i % 5 == 0) {
+                    document.write('Buzz' + '<br> ');
+                }
+                else {
+                    document.write(i + '<br> ');
+                }
+            }
+        }
+        function bai2vl2() {
+            let n = prompt('Nhập n!');
+            let giaithua = 1;
+            for (i = 1; i <= n; i++) {
+                giaithua = giaithua * i;
+            }
+            alert(n + ' ' + ' giai thừa=' + ' ' + giaithua);
+        }
+
+        // for(i=1;i<=4;i++){
+        //     for(j=0;j<i;j++){
+        //     document.write('*');
+        //      } 
+        //      document.write('<br>');
+        //     }
+        //     document.write('<br>');
+
+        //     for(i=1;i<=4;i++){
+        //     for(j=4;j>=i;j--){
+        //     document.write('*');
+        //      } 
+        //      document.write('<br>');
+        //     }
+        //     document.write('<br>');
+
+        // var numbers =prompt('Nhập N');//10
+        // var dem=0;
+        // for (i=1;i<=numbers;i++){//1-10
+        //     if (numbers<2){
+        //         document.write('Không có số nguyên tố');
+        //     }
+        //     else if (numbers>=2){
+        //     for(j=2;j<=i;j++){//2-9
+        //         if (i%j==0){
+        //             dem=dem+1;  
+        //         }
+        //     }
+        //     if(dem==0){
+        //         document.write('Số nguyên tố là:    '+i);
+        //     }
+        // }}
+        function timmax() {
+            // var nhap= prompt('Nhập 1 số');
+            var numbers = [1, 5, 10, 2, 4];
+            var max = numbers[0];
+            var index = 0;
+            for (i = 1; i < numbers.length; i++) {
+                if (numbers[i] > max) {
+                    max = numbers[i];
+                    index = i;
+                }
+            }
+            document.write('max = ' + ' ' + max);
+        }
+
+        function solonhon10() {
+            var numbers = [2, 5, 7, 20, 12, 27, 18, 3, 8, 11];
+            var dem = 0;
+            for (i = 1; i < numbers.length; i++) {
+                if (numbers[i] >= 10) {
+                    document.write(numbers[i] + ' ' + '<br>');
+                    dem = dem + 1;
+                }
+            }
+            document.write('Có' + ' ' + dem + ' ' + ' số lớn hơn hoặc bằng 10 ');
+        }
+
+
+
+        function daonguoc() {
+            var arr = [];
+            for (i = 0; i < 6; i++) {
+                arr[i] = prompt('Nhập vào 1 mảng');
+            }
+
+            var first = 0;
+            var last = arr.length - 1;
+            while (first < last) {
+                let b = arr[first];
+                arr[first] = arr[last];
+                arr[last] = b;
+                first++;
+                last--;
+            }
+            document.write(arr);
+        }
+
+function lietkemangdachieu(){
+        let a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        for (var i in a){
+            document.write('mảng'+' '+i+'<br>');
+            for(var j in a[i]){
+                document.write(a[i][j]+'<br>');
+            }
+        }}
+
+        // // let a = [
+        // //     [1, 2, 1, 24],
+        // //     [8, 11, 9, 4],
+        // //     [7, 0, 7, 27],
+        // //     [7, 4, 28, 14],
+        // //     [3, 10, 26, 7]
+        // // ];
+        // // for (var i in a){
+        // //     document.write('mảng'+' '+i+'<br>');
+        // //     for(var j in a[i]){
+        // //         document.write(a[i][j]+'<br>');
+        // //     }
+
+        // // }
+
+        // // var a = [1, 2, 1, 24,'c','i'];
+        // // // JSON.parse(a);
+        // // // document.write(a.reverse(parseInt()));
+        // // var first=0;
+        // // var last = a.length - 1;
+        // // while (first < last) {
+        // //     let b = a[first];
+        // //     a[first] = a[last];
+        // //     a[last] = b;
+        // //     first++;
+        // //     last--;
+        // // }
+        // // document.write(a);
+
+function sosanhmang(){
+        var nhap=[];
+        for (i=0;i<5;i++){
+            arr1=prompt('Nhập mảng 1');
+        }
+        for (j=0;j<5;j++){
+        var arr2=prompt('Nhập mảng 2');
+        }
+        if (arr1==arr2){
+            document.write('Hai chuỗi này giống nhau');
+        }else {
+            document.write('Hai chuỗi này khác nhau');
+        }}
+
+function timkituso(){
+        let a =[1,2,3,'a','b','c',5,6];
+        let dem=0;
+        for(let i in a){
+            if(typeof a[i] == 'number'){
+                document.write(a[i]+' ');
+                dem++;
+            }
+        }
+        document.write('<br>'+'Tổng số kí tự số là: '+' '+dem);
+    }
+
+function thaythe(){
+        var a = ['a', 'b', '-', '-', 'e', 'f']
+        var b = '-';
+        for(var i in a){
+            if (a[i]== b){
+                a[i]='_'
+            }
+        }
+        document.write(a)
+    }
+
+        // // function findMin( arr ){
+        // //             //dat min là phan tu dau tien cua mang
+        // //             var min = arr[0];
+
+        // //             //duyet vong lap
+        // //             for (let index = 0; index < arr.length; index++) {
+        // //                 //so sanh lan luot cac phan tu trong mang voi min
+        // //                 //neu phan tu do < min thi gán min là phần tử đó
+        // //                 if( arr[index] < min ){
+        // //                     min = arr[index];
+        // //                 }
+        // //             }
+
+        // //             return min;
+        // //         }
+
+        // //         var arr1 = [3, 5, 1, 8, -3, 7, 8];
+        // //         console.log('Giá trị nhỏ nhât của mảng arr1 là :' + findMin( arr1 ) );
+        // //         var arr2 = [7, 12, 6, 9, 20, 56, 89];
+        // //         console.log('Giá trị nhỏ nhât của mảng arr2 là :' + findMin( arr2 ) );
+        // //         var arr3 = [];
+        // //         console.log('Giá trị nhỏ nhât của mảng arr3 là :' + findMin( arr3 ) );
+        // //         var arr4 = [0, 0, 0, 0, 0, 0];
+        // //         console.log('Giá trị nhỏ nhât của mảng arr4 là :' + findMin( arr4 ) );
+
+        // //         //3 ngôi
+        // //         //ngôi thứ nhất là: điều kiện
+        // //         //ngôi thứ hai là: thực hiện khi điều kiện đúng
+        // //         //ngôi thứ ba là: thực hiện khi điều kiện sai
+
+        // //         var number = 5;
+
+        // //         if( number % 2 == 0 ){
+        // //             console.log('số chẵn');
+        // //         }else{
+        // //             console.log('số lẽ')
+        // //         }
+
+        // //         ( number % 2 == 0 ) ? console.log('số chẵn') : console.log('số lẽ');
+
+        function kiemtrasnt(){
+        var nhap=prompt('Nhập n')
+        var count=0
+        if (nhap<2){
+            document.write('Không phải là số nguyên tố')
+        }
+        for(i=2;i<=Math.sqrt(nhap);i++){
+            if (nhap%2==0){
+                count++
+            }
+        }
+        if(count==0){
+            document.write(nhap+' '+' là số nguyên tố')
+        }else{
+            document.write(nhap+' '+'không phải là số nguyên tố')
+        }}
+
+        function lietkesntnhohonN(){
+        var nhap=prompt('Nhập n')//nhập vào 10
+        document.write('Số nguyên tố nhỏ hơn'+' '+nhap+' '+'là:'+' ')
+        for(i=2;i<=nhap;i++){//i chạy từ 1 đến 10
+            if (nhap<2){//nếu nhập vào số bé hơn 2
+               document.write('Không có số nguyên tố')//in ra màn hình
+           }
+           var count=0
+            for(n=2;n<=Math.sqrt(i);n++){//i chạy từ 2 đến i
+                if (i%n==0){
+                     count++
+                }
+        }
+            if(count==0){
+                document.write(i+' ')}
+        }}
+
+        function lietkesnt() {
+            // liệt kê n số nguyên tố dùng function
+            var number = prompt('Nhập n')
+            function isPrime(number) {
+                var tong = 0;
+                var i = 2;
+                while (tong < number) {
+                    var sum = 0;
+                    for (j = 2; j < i; j++) {
+                        if (i % j == 0) {
+                            sum++;
+                        }
+                    }
+                    if (sum == 0) {
+                        document.write(i + ' là số nguyên tố ' + '<br>');
+                        tong++;
+                    }
+                    i++;
+                }
+                document.write('có' + ' ' + tong + " " + 'số nguyên tố');
+            }
+            isPrime(number)
+        }
+function square(){
+function square(number){
+ var result  = number * number
+ return result
+}
+var square = square(5)
+document.write(square)
+}
+    </script>
+</body>
+
+</html>

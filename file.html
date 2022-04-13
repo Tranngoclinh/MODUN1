@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" onkeyup="xu_ly()" id="name" value=" ">
+    <p id="Ketqua">
+        Nội Dung Inner
+    </p>
+    <script>
+        function xu_ly() {
+            var inputName = document.getElementById("name");
+            var name = inputName.value;
+           
+            var divKetqua = document.getElementById("Ketqua");
+             console.log(name)
+            //   console.log(divKetqua)
+            divKetqua.innerHTML = name;
+        }
+
+    </script>
+</body>
+
+</html>

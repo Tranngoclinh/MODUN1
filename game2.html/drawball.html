@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="game" width="600" height="400" style="border: 1px solid rgb(246, 31, 7)">
+
+    </canvas>
+</body>
+<script>
+
+    var canvas = document.getElementById('game')
+    var context = canvas.getContext('2d')
+    var x = 300, y = 10
+    var dx = 5, dy = 2
+    function drawball() {
+        context.beginPath()
+        context.arc(x, y, 10, 0, Math.PI * 2)
+        context.fillStyle = 'red'
+        context.fill()
+        context.closePath()
+    }
+    setInterval(function () {
+            context.clearRect(0, 0, canvas.width, canvas.height)
+            drawball()
+            start()
+
+            if (x - 10 < 0 || x > canvas.width - 10) {
+                dx = -dx
+            }
+            if (y - 10 < 0 || y > canvas.height -10) {
+                dy = -dy
+            }
+            if (y == canvas.height - 10) {
+                alert('GameOver')
+            }
+            
+    }, 20);
+
+
+    var c = document.getElementById('game')
+    var nv1 = c.getContext("2d");
+    nhanvat = {
+        x: 260, y: 350
+    }
+    function start() {
+        nv1.fillStyle = "red"
+        nv1.fillRect(nhanvat.x, nhanvat.y, 80, 10)
+        vacham();
+
+
+    }
+    function vacham() {
+        if (nhanvat.x <= 0 || nhanvat.x + 80 >= 300) {
+            console.log('Thua');
+        }
+    }
+
+    document.addEventListener('keydown', key => {
+        nv1.clearRect(nhanvat.x, nhanvat.y, 80, 10)
+        nv1.fillStyle = "red"
+        switch (key.keyCode) {
+            case 37:
+                if (nhanvat.x > 0)
+                    nhanvat.x -= 25
+                break;
+            // case 38:
+            // if (nhanvat.y  > 0)
+            //     nhanvat.y -= 5
+            //     break;
+            case 39:
+                if (nhanvat.x + 80 < 600)
+                    nhanvat.x += 25
+                break;
+            // case 40:
+            //     if (nhanvat.y +25 < 400)
+            //         nhanvat.y += 5
+            //     break;
+        }
+
+    });
+</script>
+
+</html>

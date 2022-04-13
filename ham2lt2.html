@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button onclick="bai1()">Bài 1</button>
+    <button onclick="bai2()">Bài 2</button>
+    <button onclick="bai3()">Bài 3</button>
+    <button onclick="bai4()">Bài 4</button>
+    <button onclick="bai5()">Bài 5</button>
+    <button onclick="bai6()">Bài 6</button>
+    <button onclick="bai7()">Bài 7</button>
+    <button onclick="bai8()">Bài 8</button>
+    <button onclick="bai9()">Bài 9</button>
+</head>
+
+<body>
+
+</body>
+<script>
+    function bai1() {
+        var a = prompt('Nhập 1 số')
+        function square() {
+            return a * a
+        }
+        document.write(square())
+    }
+
+    function bai2() {
+        var r = prompt('Nhập Bán Kính')
+        const PI = 3.14159265359
+        function acreage() {
+            return PI * r * r
+        }
+        function perimeter() {
+            return 2 * PI * r
+        }
+        document.write('Diện tích là:' + ' ' + acreage())
+        document.write('<br>' + 'Chu vi là:' + ' ' + perimeter())
+    }
+
+    function bai3() {
+        let number = prompt('Nhập N')
+        let giaithua = 1
+        function factorial(number) {
+            for (i = 1; i <= number; i++) {
+                giaithua *= i
+            }
+            return giaithua
+        }
+        alert(number + ' Giai thừa = ' + factorial(number))
+    }
+
+    function bai4() {
+        function check(nt) {
+            var nhap = prompt('Nhập 1 số')
+            let nt = parseInt(nt)
+            if (typeof nt == 'number' && isNaN(nt)) {
+                return true
+            } else {
+                return false
+            }
+        }
+        if (check(nhap) == true) {
+            console.log('True')
+        } else {
+            console.log('false')
+        }
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    button {
+        padding: 8px 10px 8px 11px;
+        background-color: rgb(69, 231, 69);
+    }
+
+        input[type="text"] {
+            margin: 16px;
+            width: 263px;
+            height: 32px;
+        }
+        .search {          
+            width: 400px;
+            height: 70px;
+            background-color: #eaeaea;
+        }
+        .boss {
+            width: 664px;
+        }
+        ul {
+    padding: 11px 24px;
+    margin: 0px;
+}
+
+    </style>
+</head>
+<body>
+<div class="boss">
+<form action="">
+    <h3>
+    Add New Product
+    </h3>
+<div class="search">
+    <form action="">
+        <input id="nhap" onclick="nhap()" type="text" placeholder="New Product">
+        <button id="them" onclick="them()" style=" background-color: rgb(55, 216, 55);">Add</button>
+    </form>
+</div>
+    <h3>
+        Display All Produce
+    </h3>
+
+<div id="index">
+    <table>
+        <tr>
+            <th>Product name</th>
+            <th>Products</th>
+        </tr>
+    </table>
+        
+</div>
+<div id="tong">
+<div>
+    <form action=""> 
+    <ul>     
+            <td>Sony Xperia</td>
+            <td><button>Edit</button></td>
+            <td><button>Delete</button></td>   
+    </ul>
+    </form>
+</div>
+<div>
+</div>
+<div>
+    <form action="" style="background-color: #eaeaea;">  
+        <ul>
+                <td>Samsung Glaxy</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>
+        </ul>
+    </form>
+</div>
+
+<div>
+    <form action=""> 
+        <ul>
+
+                    <td>Nokia 6</td>
+                    <td><button>Edit</button></td>
+                    <td><button>Delete</button></td>
+
+            </ul>
+    </form>
+</div>
+<div>
+    <form action="" style="background-color: #eaeaea;"> 
+        <ul>
+                <td>Xiaomi Redmi Note 4</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>
+        </ul>
+    </form>
+</div>
+<div>
+    <form action=""> 
+        <ul>
+                <td>Apple iPhone 6S</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>
+        </ul>
+    </form>
+</div>
+<div>
+    <form action="" style="background-color: #eaeaea;"> 
+        <ul>
+                <td>Xiaomi Mi 5s Plus</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>
+        </ul>
+    </form>
+</div>
+<div>
+    <form action=""> 
+        <ul>
+                <td>Apple iPhone 8 Plus</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>
+        </ul>
+    </form>
+</div>
+<div>
+    <form action="" style="background-color: #eaeaea;"> 
+        <ul>
+                <td>Fujitsu F-04E</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>
+        </ul>
+    </form>
+</div>
+<div>
+    <form action=""> 
+        <ul>
+                <td>Oppo A71</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>
+        </ul>
+    </form>
+</div>
+</form>
+</div>
+</div>
+    <script>
+        var arr=[]
+        function them(){
+           arr.push(document.getElementById('nhap').value)
+            show()
+        }
+        function show(){
+            var table=''
+            for (let i = 0; i < arr.length; i++) {
+                if(i%2!=0){
+                     table += '<tr class="tr">'
+                     table += '<th>' + arr[i] + '</th>'
+                     table += '<td> <button onclick="click_edit('+i+')">Edit</button></td>'
+                     table += '<td> <button onclick="click_delete('+i+')">Delete</button></td>'
+                     table += '</tr>'
+                }else{
+                    table += '<tr>'
+                    table += '<th>' + arr[i] + '</th>'
+                    table += '<td> <button onclick="click_edit('+i+')">Edit</button></td>'
+                    table += '<td> <button onclick="click_delete('+i+')">Delete</button></td>'
+                    table += '</tr>'
+                }
+            }
+        }
+        
+
+
+
+
+    </script>
+</body>
+</html>
